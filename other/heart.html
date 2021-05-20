@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>aixintiaodong</title>
+	<style>
+		body{
+			margin: 0;
+		}
+		.heart{
+			position: relative;
+			height: 100px;
+			width: 100px;
+			background-color: black;
+			margin: 200px auto;
+			transform:rotate(45deg);
+			animation: heart 1s infinite;
+		}
+		.heart::before,.heart::after{
+			content: "";
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			background-color: black;
+			border-radius: 48px;
+		}
+		.heart::before{
+			right:60px;
+		}
+		.heart::after{
+			bottom:60px;
+		}
+		/*动画*/
+		@keyframes heart{
+			0%{
+				/*缩放*/
+				transform:scale(0.8) rotate(45deg); 
+			}
+			50%{
+				transform:scale(1) rotate(45deg);
+			}	
+			100%{
+				transform:scale(0.8) rotate(45deg);
+			}	
+		}
+	</style>
+</head>
+<body>
+		<div class="heart"></div>
+</body>
+</html>
